@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#EC3033">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/images/favicon.ico">
+    <link rel="stylesheet" href="css/core.css" media="screen">
+    <link rel="stylesheet" href="css/style.css" media="screen">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7"
+        crossorigin="anonymous">
+
+    <title> EXPO MÉDICA - FACTURAS </title>
+
+</head>
+<body>
+
+    <header class="flex">
+        <div class="column">
+            <div class="header-top">
+                <div class="justify-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="phone align-center">
+                                <i class="fas fa-phone"></i>
+                                <a class="align-center link" href="tel:9981010203">
+                                    &nbsp; (998)103 5791
+                                </a>
+                            </div>
+                            <div class="email align-center">
+                                <i class="fas fa-envelope"></i>
+                                <a class="align-center link" href="mailto:mail@mail.com">
+                                    &nbsp; atencion@expomedica.com
+                                </a>
+                            </div>
+                            <div class="cart-user align-center">
+                                <div class="cart auto">
+                                    <div class="row">
+                                        <div class="icon auto align-center">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </div>
+                                        <div class="column">
+                                            <a class="link" href="#">
+                                                (3)
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="user auto">
+                                    <div class="row">
+                                        <div class="icon auto align-center">
+                                            <i class="fas fa-user-tag"></i>
+                                        </div>
+                                        <div class="column">
+                                            <a class="text-center link" href="#">
+                                                EMPRESA COOL SA DE CV
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="header-main">
+                <div class="justify-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="logo align-center">
+                                <a href="#">
+                                    <div class="responsive-img">
+                                        <img src="img/logo-expo-medica.jpg" alt="Logo Expo Médica" title="Logo Expo Médica">
+                                    </div>
+                                </a>
+                            </div>
+    
+                            <div class="menu align-center">
+                                <nav>
+                                    <div class="nav-item auto">
+                                        <a class="link" href="#">
+                                            INICIO
+                                        </a>
+                                    </div>
+                                    <div class="nav-item auto">
+                                        <a class="link" href="#">
+                                            CATÁLOGO
+                                        </a>
+                                    </div>
+                                    <div class="nav-item auto">
+                                        <a class="link" href="#">
+                                            NOSOTROS
+                                        </a>
+                                    </div>
+                                </nav>
+                            </div>
+    
+                            <div class="search auto">
+                                <button class="btn-clean" id="open-modal-search">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+    
+                            <div class="menu-mobile auto">
+                                <button class="btn-clean" id="open-menu">
+                                    <i class="fas fa-bars"></i>
+                                </button>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="flex main-facturas">
+        <div class="column">
+            <div class="facturas justify-center">
+                <div class="container">
+                    <div class="column">
+                        <div class="white-space-32"></div>
+                        <h2 class="color-red">
+                            FACTURAS
+                        </h2>
+                        <div class="white-space-16"></div>
+                        <form>
+                            <div class="row-responsive dates">
+                                <div class="column">
+                                    <h3>
+                                        Desde:
+                                    </h3>
+                                    <div class="white-space-8"></div>
+                                    <input class="input-date" type="date" id="fromDate" name="fromDate">
+                                </div>
+                                <div class="column">
+                                    <h3>
+                                        Hasta:
+                                    </h3>
+                                    <div class="white-space-8"></div>
+                                    <input class="input-date" type="date" id="toDate" name="toDate">
+                                </div>
+                                <div class="column justify-end">
+                                    <button class="btn btn-red" id="search-button-facturas">
+                                        <i class="color-white fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="white-space-32"></div>
+
+                        <div class="table-scroll">
+                            <table class="cart-table" cellspacing="0" cellpadding="0">
+                                <thead>
+                                    <tr class="table-head">
+                                        <th>N° Folio</th>
+                                        <th>Fecha</th>
+                                        <th>Importe</th>
+                                        <th>Estado</th>
+                                        <th>Pago</th>
+                                        <th>Líneas</th>
+                                        <th>XML</th>
+                                        <th>PDF</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr class="table-row">
+                                        <td class="bordered">
+                                            100102
+                                        </td>
+                                        <td class="bordered">
+                                            10/12/18
+                                        </td>
+                                        <td class="bordered">
+                                            $500.50
+                                        </td>
+                                        <td class="bordered">
+                                            Vigente
+                                        </td>
+                                        <td class="bordered">
+                                            $550.60
+                                        </td>
+                                        <td class="bordered">
+                                            <a href="#">
+                                                <i class="fas fa-file"></i>
+                                            </a>                                            
+                                        </td>
+                                        <td class="bordered">
+                                            <a href="#">
+                                                <i class="fas fa-file-code"></i>
+                                            </a>                                            
+                                        </td>
+                                        <td class="bordered">
+                                            <a href="#">
+                                                <i class="fas fa-file-pdf"></i>
+                                            </a>                                            
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+
+
+                            </table>
+                        </div>
+
+                        <div class="white-space-32"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="flex">
+        <div class="justify-center">
+            <div class="container">
+                <div class="column">
+                    <div class="row-responsive">
+                        <div class="contact wow fadeInLeft" data-wow-delay="0.3s">
+                            <div class="column">
+                                <h3 class="color-white">
+                                    CONTACTO
+                                </h3>
+    
+                                <div class="white-space-16"></div>
+                                <p class="color-red">
+                                    <i class="fas fa-envelope color-red"></i>
+                                    <a href="mailto:hola@pardi.mx">
+                                        contacto@expomedica.com
+                                    </a>
+                                </p>
+                                <div class="white-space-16"></div>
+                                <p class="color-red">
+                                    <i class="fas fa-phone"></i>
+                                    <a href="tel:(998)1035791">
+                                        (998)103 5791
+                                    </a>
+                                </p>
+    
+                                <div class="white-space-24"></div>
+                                <div class="row footer-icons">
+                                    <div class="footer-icon bordered auto text-center">
+                                        <a rel="follow" target="_blank" href="/">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="footer-icon bordered auto text-center color-white">
+                                        <a class="color-white" rel="follow" target="_blank" href="/">
+                                            <i class="color-white fab fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="footer-icon bordered auto">
+                                        <a rel="follow" target="_blank" href="/">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                    </div>
+                                    <div class="footer-icon bordered auto">
+                                        <a rel="follow" target="_blank" href="/">
+                                            <i class="fab fa-skype"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="help wow fadeInDown" data-wow-delay="0.5s">
+                            <div class="column">
+                                <h3 class="color-white">
+                                    AYUDA
+                                </h3>
+                                <div class="white-space-16"></div>
+                                <a class="link" href="/nosotros">
+                                    Nosotros
+                                </a>
+                                <div class="white-space-16"></div>
+                                <a class="link" href="/nosotros#contacto">
+                                    Atención al Cliente
+                                </a>
+                                <div class="white-space-16"></div>
+                                <a class="link" href="">
+                                    Mapa del sitio
+                                </a>
+                            </div>
+                        </div>
+                        <div class="account wow fadeInRight" data-wow-delay="0.7s">
+                            <div class="column">
+                                <h3 class="color-white">
+                                    MI CUENTA
+                                </h3>
+                                <div class="white-space-16"></div>
+                                <a class="link" href="/pedidos">
+                                    Mis Pedidos
+                                </a>
+                                <div class="white-space-16"></div>
+                                <a class="link" href="/facturas">
+                                    Mis Facturas
+                                </a>
+                                <div class="white-space-16"></div>
+                                <a class="link" href="/carrito">
+                                    Mi Carrito
+                                </a>
+    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="white-space-16"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
